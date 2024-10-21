@@ -2,6 +2,7 @@ package marcowidesott.backm2w1d1;
 
 import marcowidesott.backm2w1d1.entities.Bibite;
 import marcowidesott.backm2w1d1.entities.Pizza;
+import marcowidesott.backm2w1d1.entities.PizzeXL;
 import marcowidesott.backm2w1d1.entities.Topping;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -36,6 +37,16 @@ public class MenuConfig {
     @Bean
     public Topping Peperoni() {
         return new Topping(80, 1.99, "Peperoni");
+    }
+
+    @Bean
+    public PizzeXL Sicula() {
+        return new PizzeXL(200, 22.99, "Sicula");
+    }
+
+    @Bean
+    public PizzeXL Napoli() {
+        return new PizzeXL(200, 21.99, "Napoli");
     }
 
 }
