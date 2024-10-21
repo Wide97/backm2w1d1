@@ -15,14 +15,25 @@ public class Backm2w1d1Application {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Backm2w1d1Application.class);
 
-        Pizza Salamino = (Pizza) context.getBean("Salamino");
-        System.out.println(Salamino);
+        String[] pizzaBeans = context.getBeanNamesForType(Pizza.class);
+        String[] bibiteBeans = context.getBeanNamesForType(Bibite.class);
+        String[] toppingsBeans = context.getBeanNamesForType(Topping.class);
 
-        Bibite CocaCola = (Bibite) context.getBean("CocaCola");
-        System.out.println(CocaCola);
-
-        Topping Peperoni = (Topping) context.getBean("Peperoni");
-        System.out.println(Peperoni);
+        System.out.println("----------- Menu Pizze -----------");
+        for (String beanName : pizzaBeans) {
+            Pizza pizza = context.getBean(beanName, Pizza.class);
+            System.out.println(" - " + pizza);
+        }
+        System.out.println("----------- Menu Bibite -----------");
+        for (String beanName : bibiteBeans) {
+            Bibite bibite = context.getBean(beanName, Bibite.class);
+            System.out.println(" - " + bibite);
+        }
+        System.out.println("----------- Menu Toppings -----------");
+        for (String beanName : toppingsBeans) {
+            Topping topping = context.getBean(beanName, Topping.class);
+            System.out.println(" - " + topping);
+        }
 
 
         context.close();
