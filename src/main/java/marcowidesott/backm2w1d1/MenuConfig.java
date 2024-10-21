@@ -9,18 +9,33 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MenuConfig {
     @Bean
-    public Pizza getPizza() {
+    public Pizza Salamino() {
         return new Pizza(200, 18.99, "Salamino");
     }
 
     @Bean
-    public Bibite getBibita() {
+    public Pizza QuattroStagioni() {
+        return new Pizza(250, 19.99, "Quattro Stagioni");
+    }
+
+    @Bean
+    public Bibite CocaCola() {
         return new Bibite(50, 5.99, "Coca Cola");
     }
 
     @Bean
-    public Topping getTopping() {
+    public Bibite The() {
+        return new Bibite(40, 3.99, "Thè al limone");
+    }
+
+    @Bean
+    public Topping Prosciutto() {
         return new Topping(100, 1.99, "Prosciutto");
+    }
+
+    @Bean
+    public Topping Peperoni() {
+        return new Topping(80, 1.99, "Peperoni");
     }
 
 }
