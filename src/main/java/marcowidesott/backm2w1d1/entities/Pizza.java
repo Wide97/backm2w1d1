@@ -5,12 +5,18 @@ import lombok.Setter;
 
 @Getter
 @Setter
-
-
 public class Pizza extends Menu {
-    private String pizza;
+    private String name;
 
-    public Pizza(int calories, double price) {
+    public Pizza(int calories, double price, String name) {
         super(calories, price);
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Pizza{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }

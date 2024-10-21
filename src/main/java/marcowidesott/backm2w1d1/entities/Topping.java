@@ -12,4 +12,11 @@ public class Topping extends Menu {
         super(calories, price);
         this.topping = topping;
     }
+
+    @Override
+    public String toString() {
+        return "Topping{" +
+                "topping='" + topping + '\'' +
+                '}';
+    }
 }
