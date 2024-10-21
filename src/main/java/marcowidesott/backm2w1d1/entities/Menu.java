@@ -7,6 +7,7 @@ import lombok.Setter;
 @Setter
 @Getter
 
+
 public abstract class Menu {
     private int calories;
     private double price;

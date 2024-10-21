@@ -24,22 +24,22 @@ public class Backm2w1d1Application {
         System.out.println("----------- Menu Pizze -----------");
         for (String beanName : pizzaBeans) {
             Pizza pizza = context.getBean(beanName, Pizza.class);
-            System.out.println(" - " + pizza);
+            System.out.println(" - " + pizza + " - " + pizza.getCalories() + "calorie - " + pizza.getPrice() + " Euro");
         }
         System.out.println("----------- Menu Bibite -----------");
         for (String beanName : bibiteBeans) {
             Bibite bibite = context.getBean(beanName, Bibite.class);
-            System.out.println(" - " + bibite);
+            System.out.println(" - " + bibite + " - " + bibite.getCalories() + "calorie - " + bibite.getPrice() + " Euro");
         }
         System.out.println("----------- Menu Toppings -----------");
         for (String beanName : toppingsBeans) {
             Topping topping = context.getBean(beanName, Topping.class);
-            System.out.println(" - " + topping);
+            System.out.println(" - " + topping + " - " + topping.getCalories() + "calorie - " + topping.getPrice() + " Euro");
         }
         System.out.println("----------- Menu PizzeXL -----------");
         for (String beanName : pizzexlBeans) {
             PizzeXL pizzeXL = context.getBean(beanName, PizzeXL.class);
-            System.out.println(" - " + pizzeXL);
+            System.out.println(" - " + pizzeXL + " - " + pizzeXL.getCalories() + "calorie - " + pizzeXL.getPrice() + " Euro");
         }
 
 
