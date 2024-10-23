@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class Bibite extends Menu {
+public class Bibite extends MenuItem {
     private String drinks;
 
     public Bibite(int calories, double price, String drinks) {

@@ -8,11 +8,11 @@ import lombok.Setter;
 @Getter
 
 
-public abstract class Menu {
+public abstract class MenuItem {
     private int calories;
     private double price;
 
-    public Menu(int calories, double price) {
+    public MenuItem(int calories, double price) {
         this.calories = calories;
         this.price = price;
     }

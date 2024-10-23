@@ -1,4 +1,4 @@
-package marcowidesott.backm2w1d1;
+package marcowidesott.backm2w1d1.config;
 
 import marcowidesott.backm2w1d1.entities.Bibite;
 import marcowidesott.backm2w1d1.entities.Pizza;

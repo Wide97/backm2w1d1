@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Topping extends Menu {
+public class Topping extends MenuItem {
     private String topping;
 
     public Topping(int calories, double price, String topping) {
