@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class MenuConfig {
+
     @Bean
     public Pizza Salamino() {
         return new Pizza(200, 18.99, "Salamino");
@@ -48,5 +49,4 @@ public class MenuConfig {
     public PizzeXL Napoli() {
         return new PizzeXL(200, 21.99, "Napoli");
     }
-
 }

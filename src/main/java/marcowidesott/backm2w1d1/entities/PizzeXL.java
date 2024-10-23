@@ -1,22 +1,23 @@
 package marcowidesott.backm2w1d1.entities;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Setter
-@Getter
-public class PizzeXL extends MenuItem {
+public class PizzeXL implements MenuItem {
+    private double calories;
+    private double price;
     private String name;
 
-    public PizzeXL(int calories, double price, String name) {
-        super(calories, price);
+    public PizzeXL(double calories, double price, String name) {
+        this.calories = calories;
+        this.price = price;
         this.name = name;
     }
 
     @Override
-    public String toString() {
-        return "PizzeXL{" +
-                "name='" + name + '\'' +
-                '}';
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
     }
 }

@@ -1,22 +1,23 @@
 package marcowidesott.backm2w1d1.entities;
 
-import lombok.Getter;
-import lombok.Setter;
+public class Topping implements MenuItem {
+    private double calories;
+    private double price;
+    private String name;
 
-@Getter
-@Setter
-public class Topping extends MenuItem {
-    private String topping;
-
-    public Topping(int calories, double price, String topping) {
-        super(calories, price);
-        this.topping = topping;
+    public Topping(double calories, double price, String name) {
+        this.calories = calories;
+        this.price = price;
+        this.name = name;
     }
 
     @Override
-    public String toString() {
-        return "Topping{" +
-                "topping='" + topping + '\'' +
-                '}';
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
     }
 }
